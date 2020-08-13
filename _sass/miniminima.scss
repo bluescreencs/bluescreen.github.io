@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+// this is based on the minima theme
+
+// z-index
+// 10 - navicon
+// 10 - site title (on mobile view)
+// 9 - header
+// 8 - back to top
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "global/typography",
+  "global/colors",
+  "global/base",
+  "global/syntax-highlighting",
+  "styles/background",
+  "styles/shadow",
+  "layout/components/header",
+  "layout/components/footer",
+  "layout/containers/pages",
+  "layout/containers/blog",
+  "layout/containers/posts"
+;
+

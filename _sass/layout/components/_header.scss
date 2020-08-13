@@ -1,0 +1,192 @@
+/**
+ * Site header
+ */
+
+.site-header {
+  min-height: $spacing-unit * 2;
+  // Positioning context for the mobile navigation icon
+  position: fixed;
+  min-width: 100%;
+  z-index: 9;
+  // vertically center the wrapper for nav
+  display: flex;
+
+  div.wrapper {
+    // flex child property, occupy available space
+    flex: 1 0 auto;
+    // flex parent property
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+  }
+
+  // note: don't set flex on the image tag....
+  .site-logo {
+    width: 48px;
+  }
+  
+  .site-title {
+    @include relative-font-size(0.85);
+    font-weight: 400;
+    line-height: $base-line-height * $base-font-size * 2.25;
+    // letter-spacing: -1px;
+    margin-bottom: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    &,
+    &:visited {
+      color: $grayDark;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent;
+      text-decoration: none;
+    }
+
+    // don't show site-title on mobile view
+    @include media-query($on-palm) {
+      // display: none;
+      /** custom entry(s) **/
+      // so it does not get block by the div of nav
+      z-index: 10;
+      /** end of custome entry(s) **/
+    }
+  }
+  
+  .site-nav {
+    line-height: $base-line-height * $base-font-size * 2.25;
+    // this is the FLEX child of .wrapper 
+    // together with site-logo and site-title
+    flex: 1 0 auto;
+    text-align: end;
+
+    .nav-trigger {
+        display: none;
+    }
+  
+    .menu-icon {
+      display: none;
+    }
+
+    .page-link {
+      line-height: $base-line-height;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &,
+      &:visited {
+        color: $grayLight;
+      }
+
+      &:hover,
+      &:focus {
+        // color: $blue-hover;
+        color: $accent;
+        text-decoration: none;
+      }
+
+      &:active {
+        // color: $blue-hover;
+        color: $accent;
+        // position: relative;
+        // top: 1px;
+        // left: 1px;
+        // remove the text shadow to avoid fat text
+        text-shadow: none;
+      }
+  
+      // Gaps between nav items, but not on the last one
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  
+    @include media-query($on-palm) {
+      position: absolute;
+      top: 14px;
+      right: $spacing-unit / 24;
+      // border: 1px solid $blue;
+      // border-radius: 8px;
+      text-align: right;
+      background-color: $white;
+      width: 50%;
+      padding-right: $spacing-unit / 2;
+  
+      label[for="nav-trigger"] {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 36px;
+        z-index: 10;
+        cursor: pointer;
+      }
+  
+      .menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
+        text-align: center;
+  
+        > svg {
+          fill: $blue;
+          &:active {
+            position: relative;
+            top: 1px;
+            right: 1px;
+          }
+        }
+      }
+  
+      input ~ .trigger {
+        clear: both;
+        display: none;
+      }
+  
+      input:checked ~ .trigger {
+        display: block;
+        padding-bottom: 5px;
+        // border: 1px solid $blue;
+        /* custom entry(s) */
+        box-shadow: 0 1px 4px -1px $blue;
+        /* end of custom entry(s) */
+      }
+  
+      .page-link {
+        display: block;
+        padding: 5px 10px;
+        margin-left: 20px;
+  
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/* custom entries */
+
+.nav-link-active {
+  // for vanity so the transition
+  // does not show the gray color
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue-hover;
+  }
+  color: $blue !important;
+  transition: color 150ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out;
+  -moz-transition: color 150ms ease-in-out;
+  -ms-transition: color 150ms ease-in-out;
+  -o-transition: color 150ms ease-in-out;
+}
+  
+    

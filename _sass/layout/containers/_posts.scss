@@ -1,0 +1,78 @@
+/**
+   * Posts
+   */
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+.post-title {
+  @include relative-font-size(2);
+  // letter-spacing: 1px;
+  line-height: 1.6875rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.6875);
+    line-height: 2rem;
+  }
+}
+
+.post-content {
+  margin-bottom: $spacing-unit;
+  line-height: 1.85rem;
+
+  h2 {
+    @include relative-font-size(2);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.625);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.375);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.125);
+    }
+  }
+}
+
+figure {
+  // for the old post images that are hosted locally
+  >img[src^="/assets/img/post/"] {
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  >figcaption {
+    .post-img-caption {
+      color: $grayDark;
+      font-size: $small-font-size;
+      text-align: center;
+      padding-top: 0.4rem;
+      padding-bottom: 0;
+      border-bottom: 1px solid $grayLight;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// .post-img-caption {
+//   >h4 {
+//     font-size: $small-font-size;
+//     color: $grayDark;
+//     text-align: center;
+//   }
+// }

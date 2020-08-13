@@ -1,0 +1,36 @@
+# general
+title: bluescreencs.github.io
+weblog: bluescreen life
+author: aL
+email: devcabforcutie@gmail.com
+location: Pampanga, PH
+timezone: PH
+description: > 
+  Welcome to my website and weblog. This site is generated
+  using [Jekyll](https://jekyllrb.com/) and hosted on
+  [GitHub Pages](https://pages.github.com/).
+
+# accounts
+github_username: bluescreencs
+twitter_username: lxru_
+youtube_username: aLkhatib47
+youtube_channel: "Bluescreen Life"
+steam_id: "76561198258174649"
+steam_username: bluescreencs
+
+# misc
+wiki_pampanga: https://en.wikipedia.org/wiki/Pampanga
+website: https://bluescreencs.github.io
+
+# blog settings
+show_excerpts: false
+permalink: /weblog/:categories/:year/:month/:day/:title:output_ext
+
+# sass settings
+sass:
+  style: compressed
+
+# code snippets
+markdown: kramdown
+
+highlighter: rouge

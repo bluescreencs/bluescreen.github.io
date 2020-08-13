@@ -1,0 +1,34 @@
+<footer class="site-footer h-card shadowTop">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper"> 
+
+    <h2 class="footer-heading"><img class="footer-logo" src="{{'/assets/img/logo.png' | relative_url}}">{{ site.title | escape }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name"><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><img class="custom-icon" src="{{ '/assets/img/user.png' | relative_url }}">{{ site.author | escape }}</a></li>
+          <li><a href="{{ site.wiki_pampanga | escape }}"><img class="custom-icon" src="{{ '/assets/img/location.png' | relative_url }}">{{ site.location | escape }}</a></li>  
+          <li><a class="u-email" href="mailto:{{ site.email }}"><img class="custom-icon" src="{{ '/assets/img/email.png' | relative_url }}">Email Me!</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p class="site-description">{{ site.description | escape | markdownify }}</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="date-updated">{{ site.title }} - updated: {{ site.time | date_to_string }}</span>
+      <span id="js-backToTop" class="backToTop">Back to Top<span class="upArrow">&uarr;</span></span>
+    </div>
+
+
+  </div>
+
+</footer>

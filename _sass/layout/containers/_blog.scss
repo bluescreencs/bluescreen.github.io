@@ -1,0 +1,59 @@
+/*
+*
+* this sass file is for the
+* main weblog page. See 'posts'
+* for the styling of the blog entries.
+*
+*/
+
+// .post-list-heading {
+//     @include relative-font-size(1.5);
+//   }
+  
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+
+        &:hover {
+            .post-link {
+                text-decoration: none;
+                color: $accent;
+            }
+            .post-meta {
+                border-bottom-color: $accent;
+                color: $grayLight;
+            }
+        }
+    }
+}
+
+.post-meta {
+    font-size: $extra-small-font-size;
+    color: $grayDark;
+    display: inline-block;
+    border-bottom: 1px solid $grayLight;
+    padding-bottom: 0.4rem;
+    width: 67%;
+}
+
+.post-link {
+    display: block;
+    @include relative-font-size(1.25);
+}
+
+.post-excerpt-title {
+    margin-bottom: 0;
+    line-height: 1.6875rem;
+}
+
+.post-excerpt-content {
+    margin-top: 1rem;
+    line-height: $posts-line-height;
+}
+
+
+
+
