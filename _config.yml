@@ -18,6 +18,11 @@ youtube_channel: "Bluescreen Life"
 steam_id: "76561198258174649"
 steam_username: bluescreencs
 
+# collections
+collections_dir: collections
+collections:
+  quotes:
+
 # misc
 wiki_pampanga: https://en.wikipedia.org/wiki/Pampanga
 website: https://bluescreencs.github.io

@@ -45,13 +45,17 @@
       text-decoration: none;
     }
 
-    // don't show site-title on mobile view
+    // don't show site-title on mobile view (portrait)
+    // [20.12.01] - it still shows when on landscape with big a$s phones.
+    // [20.12.01] - is this really necessary? (debatable) 
     @include media-query($on-palm) {
-      // display: none;
+      display: none;
+
       /** custom entry(s) **/
       // so it does not get block by the div of nav
+      // [20.12.01] - i don't remember what is this for... what should not be block?
       z-index: 10;
-      /** end of custome entry(s) **/
+      /** end of custom entry(s) **/
     }
   }
   
