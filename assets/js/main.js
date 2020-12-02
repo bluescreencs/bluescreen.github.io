@@ -1,6 +1,7 @@
 window.onload = function(){
     'use strict';
 
+/*********************** HIGHLIGHT CURRENT LINK IN NAVBAR  ***************************/
     (function highlight_nav_link(){
 
         function get_path_of_url(link){
@@ -35,7 +36,9 @@ window.onload = function(){
             }
         }, nav_link_nodes)
     })();
+/********************************* END ******************************************/
 
+/********************************** BACK TO TOP *********************************/
     (function backToTop(){
         const upArrow = document.getElementById('js-backToTop');
         upArrow.addEventListener('click', function(){
@@ -46,7 +49,12 @@ window.onload = function(){
             });
         });
     })();
+/****************************** END **********************************************/
 
-
-
+/***************************** ADD RANDOM QUOTES - (2020/12/02) **************************/
+// (function addRandomQuote(){
+//     const q = JSON.parse(quotes);
+//     console.log(q[0].author);
+// })();
+/*** END ***/
 }
