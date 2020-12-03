@@ -1,10 +1,10 @@
-window.onload = function(){
+window.onload = function () {
     'use strict';
 
-/*********************** HIGHLIGHT CURRENT LINK IN NAVBAR  ***************************/
-    (function highlight_nav_link(){
+    /*********************** HIGHLIGHT CURRENT LINK IN NAVBAR  ***************************/
+    (function highlight_nav_link() {
 
-        function get_path_of_url(link){
+        function get_path_of_url(link) {
             link = link.split('/');
             link = link[link.length - 1].split('.')[0];
             return link;
@@ -16,10 +16,10 @@ window.onload = function(){
         const current_url = document.URL;
         const weblog_link = document.getElementById('js-weblog');
 
-        nav_link_nodes.forEach(function(node){
+        nav_link_nodes.forEach(function (node) {
             // we need to add .href here because
             // each node is still an anchor tag
-            if (get_path_of_url(node.href) !== get_path_of_url(current_url)){
+            if (get_path_of_url(node.href) !== get_path_of_url(current_url)) {
                 node.classList.remove('nav-link-active')
                 // if no node is equal to the current path, it means:
                 // a) we are in the homepage
@@ -28,7 +28,7 @@ window.onload = function(){
                 // and since we don't highlight navlinks when we are in the homepage
                 // we are more concern when we are in a blogpost,
                 // so if we are in a blogpost, we should highlight the weblog navlink
-                if (current_url.split('/')[3] === "weblog"){
+                if (current_url.split('/')[3] === "weblog") {
                     weblog_link.classList.add('nav-link-active');
                 }
             } else {
@@ -36,12 +36,12 @@ window.onload = function(){
             }
         }, nav_link_nodes)
     })();
-/********************************* END ******************************************/
+    /********************************* END ******************************************/
 
-/********************************** BACK TO TOP *********************************/
-    (function backToTop(){
+    /********************************** BACK TO TOP *********************************/
+    (function backToTop() {
         const upArrow = document.getElementById('js-backToTop');
-        upArrow.addEventListener('click', function(){
+        upArrow.addEventListener('click', function () {
             window.scroll({
                 top: 0,
                 left: 0,
@@ -49,12 +49,22 @@ window.onload = function(){
             });
         });
     })();
-/****************************** END **********************************************/
+    /****************************** END **********************************************/
 
-/***************************** ADD RANDOM QUOTES - (2020/12/02) **************************/
-// (function addRandomQuote(){
-//     const q = JSON.parse(quotes);
-//     console.log(q[0].author);
-// })();
-/*** END ***/
+    /***************************** ADD RANDOM QUOTES - (2020/12/02) **************************/
+    (function addRandomQuote() {
+        const quotes =
+            [
+                {
+                    "author": "JBP",
+                    "quote": "To those who have everything, more will be given; and to those who have nothing, everything will be taken.",
+                    "citation": "12 Rules for Life"
+                }
+            ]
+
+        console.log(quotes[0].quote);
+        console.log(quotes[0].author);
+        console.log(quotes[0].citation);
+    })();
+    /******************************* END *******************************************************/
 }
