@@ -1,0 +1,25 @@
+<p>Anyway, here's some random quotations to ponder upon Ashen One.</p>
+
+<figcaption class="quotes">
+    <blockquote id="quote"></blockquote>
+    <figcaption>&mdash;&nbsp;<span id="author"></span></figcaption>
+</figcaption>
+
+<script>
+    (function addRandomQuote() {
+        const quotes =
+            [
+                {
+                    "author": "JBP",
+                    "quote": "To those who have everything, more will be given; and to those who have nothing, everything will be taken.",
+                    "citation": "12 Rules for Life"
+                }
+            ]
+        q = document.getElementById("quote");
+        a = document.getElementById("author");
+
+        q.innerHTML = quotes[0].quote;
+        a.innerHTML = quotes[0].author;
+
+    })();
+</script>

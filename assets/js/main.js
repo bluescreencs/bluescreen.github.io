@@ -52,19 +52,19 @@ window.onload = function () {
     /****************************** END **********************************************/
 
     /***************************** ADD RANDOM QUOTES - (2020/12/02) **************************/
-    (function addRandomQuote() {
-        const quotes =
-            [
-                {
-                    "author": "JBP",
-                    "quote": "To those who have everything, more will be given; and to those who have nothing, everything will be taken.",
-                    "citation": "12 Rules for Life"
-                }
-            ]
+    // (function addRandomQuote() {
+    //     const quotes =
+    //         [
+    //             {
+    //                 "author": "JBP",
+    //                 "quote": "To those who have everything, more will be given; and to those who have nothing, everything will be taken.",
+    //                 "citation": "12 Rules for Life"
+    //             }
+    //         ]
 
-        console.log(quotes[0].quote);
-        console.log(quotes[0].author);
-        console.log(quotes[0].citation);
-    })();
+    //     console.log(quotes[0].quote);
+    //     console.log(quotes[0].author);
+    //     console.log(quotes[0].citation);
+    // })();
     /******************************* END *******************************************************/
 }
