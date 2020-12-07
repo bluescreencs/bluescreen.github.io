@@ -2,7 +2,7 @@
 
 <figcaption class="quotes">
     <blockquote id="quote"></blockquote>
-    <figcaption>&mdash;&nbsp;<span id="author"></span></figcaption>
+    <figcaption>&mdash;&nbsp;<span id="author"></span>,&nbsp;<cite id="citation"></cite></figcaption>
 </figcaption>
 
 <script>
@@ -13,13 +13,34 @@
                     "author": "JBP",
                     "quote": "To those who have everything, more will be given; and to those who have nothing, everything will be taken.",
                     "citation": "12 Rules for Life"
+                },
+                {
+                    "author": "Matt Barnes",
+                    "quote": "You can't wash away the high",
+                    "citation": "All The Smoke"
+                },
+                {
+                    "author": "Dame",
+                    "quote": "the Lord of Light Hearted Chemistry is very powerful, to the humble it giveth, but to the greedy he take it away.",
+                    "citation": "Game of Zones"
                 }
             ]
+
+        /* RNG */
+        function getRNG(){
+            return Math.floor(Math.random()*Math.floor(3));
+        };
+
+        // console.log(rng());
+        const rng = getRNG()
+
         q = document.getElementById("quote");
         a = document.getElementById("author");
+        c = document.getElementById("citation");
 
-        q.innerHTML = quotes[0].quote;
-        a.innerHTML = quotes[0].author;
+        q.innerHTML = quotes[rng].quote;
+        a.innerHTML = quotes[rng].author;
+        c.innerHTML = quotes[rng].citation;
 
     })();
 </script>
