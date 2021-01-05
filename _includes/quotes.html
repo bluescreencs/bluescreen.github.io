@@ -35,18 +35,18 @@
                     "citation": "The Rise and Fall of S.T.A.L.K.E.R"
                 },
                 {
-                    "author": "The American Gangster",
+                    "author": "American Gangster",
                     "quote": "The only way a goldfish can eat a shark is a whole lot of little bites",
                     "citation": " "
                 }
             ]
 
+
         /* RNG */
         function getRNG(){
-            return Math.floor(Math.random()*Math.floor(6));
+            return Math.floor(Math.random()*Math.floor(quotes.length));
         };
 
-        // console.log(rng());
         const rng = getRNG()
 
         q = document.getElementById("quote");
