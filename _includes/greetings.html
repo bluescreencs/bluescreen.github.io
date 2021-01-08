@@ -1,0 +1,26 @@
+<p><h2><span id="greetings"></span></h2></p>
+
+<script>
+    (function addRandomGreetings() {
+        const greetings =
+            [
+               "Welcome to the bonfire, Unkindled One!" ,
+               "Stay awhile and listen..."
+            ]
+
+
+        /* RNG */
+        function getRNG(){
+            return Math.floor(Math.random()*Math.floor(greetings.length));
+        };
+
+        const rng = getRNG()
+
+        g = document.getElementById("greetings");
+
+        console.log(greetings[rng]);
+
+        g.innerHTML = greetings[rng];
+
+    })();
+</script>
