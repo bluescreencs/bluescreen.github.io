@@ -1,0 +1,21 @@
+/*** 
+* QUOTES
+***/
+.quotes {
+    color: $grayDark;
+
+    &::before, &::after { content: '\201c'; color: $accent; font-size: 4rem; font-weight: bolder};
+
+    #quote {
+        color: $blue;
+        font-weight: bold;
+        letter-spacing: normal;
+        font-size: 1.6rem;
+        border-left: 6px solid $accent;
+    }
+
+    figcaption {
+        text-align: center;
+    }
+
+}
