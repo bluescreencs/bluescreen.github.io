@@ -3,6 +3,14 @@ layout: post
 title: "The 2020 Mandatory State of Self Update"
 category: self
 ---
+
+<figure>
+  <img class="post-img" src="//images.weserv.nl/?url=dropbox.com/s/4wiwj3q620aqyyg/landscape.jpg?raw=1" alt="">
+  <figcaption class="post-img-caption">
+      <h4 class="post-img-caption">This is why I'm not a Photographer</h4>
+  </figcaption>
+</figure>
+
 As of press time, I’m still alive. Not that it’s important or game changing or something, but it’s a fact. If I will summarize my 2020 experience, I mean on a personal level, as close to bare metal as possible, it is that “you can’t have your cake and eat it too”. I know, I know, how dare me?! Right? But 2020 has been my best adult year and that says a lot. I gain a lot of ~~weight~~ resources, knowledge, skills, self awareness and just personal growth in general. It highlighted how determined, motivated, mature, lazy, inconsistent, undetermined, unmotivated, immature and nonchalant (in both ways) I am. 
 
 
