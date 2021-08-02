@@ -1,10 +1,25 @@
 /*** 
 * QUOTES
 ***/
+
 .quotes {
     color: $grayDark;
+    margin-bottom: 4rem;
+    // display: flex;
+    // flex-flow: column wrap;
 
-    &::before, &::after { content: '\201c'; color: $accent; font-size: 4rem; font-weight: bolder};
+    &::before { content: '\201c';
+                color: $accent;
+                font-style: normal;
+                font-size: 5rem;
+                font-weight: bold;
+                font-family: arial;
+                height: 100%;
+                margin-top: auto;
+                margin-bottom: auto;
+    }
+
+    //&::after { content: '\201d'; color: $accent; font-style: normal; font-size: 5rem; font-weight: bold; font-family: arial};
 
     #quote {
         color: $blue;
